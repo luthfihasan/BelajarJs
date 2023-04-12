@@ -1,0 +1,29 @@
+//variabel var
+var nama ="Doni";
+var nama ="Dini";
+var nama ="Dina";
+
+console.log(nama);
+
+// jika variabelnya ada yang sama proteknya kecil (tampil yang terakhir yang diatasnya ditimpa)
+/* output
+Dina
+*/
+
+//variabel let
+let lastName = "Dini";
+let lastName1 ="Dina";
+
+console.log(lastName);
+
+// jika variabelnya ada yang sama akan di protek (tidak muncul)
+/* output
+Dini
+*/ 
+
+//variabel const
+const z = 100;
+console.log(z);
+z = 200
+console.log(z);
+/* TypeError: Assigment to constant variabel. */

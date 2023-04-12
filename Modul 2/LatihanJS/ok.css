@@ -1,0 +1,21 @@
+
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: purple;
+}
+
+.awal {
+    font-size: 15px;
+}
+
+.li {
+    font-size: 30px;
+    list-style-type:none;
+    height: 100vh;
+    width: 100%;
+    justify-content: center
+    alig-item:center;
+}
