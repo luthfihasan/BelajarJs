@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object</title>
+  <script>
+    const biodata = {
+      nama: "Luthfi Hasan",
+      usia: 21,
+      alamat: "Jambu Barat Rt 22/05 Kec. Mlonggo",
+    };
+
+    const prodi = "Rekayasa Perangkat Lunak";
+
+    function tampilkanProfil() {
+      document.getElementById("nama").textContent = biodata.nama;
+      document.getElementById("usia").textContent = biodata.usia;
+      document.getElementById("alamat").textContent = biodata.alamat;
+      document.getElementById("prodi").textContent = prodi;
+    }
+  </script>
+</head>
+<body onload="tampilkanProfil()">
+  <h2>Profil Saya</h2>
+
+  <p><strong>Nama:</strong> <span id="nama"></span></p>
+  <p><strong>Usia:</strong> <span id="usia"></span></p>
+  <p><strong>Alamat:</strong> <span id="alamat"></span></p>
+  <p><strong>Program Studi:</strong> <span id="prodi"></span></p>
+</body>
+</html>
