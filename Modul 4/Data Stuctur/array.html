@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array</title>
+</head>
+<body>
+  <h2>Data Mahasiswa</h2>
+
+  <ul id="daftar-mahasiswa"></ul>
+
+  <script>
+    const dataMahasiswa = [
+      { nama: "Mahasiswa 1", nim: "001", prodi: "Prodi 1" },
+      { nama: "Mahasiswa 2", nim: "002", prodi: "Prodi 2" },
+      { nama: "Mahasiswa 3", nim: "003", prodi: "Prodi 3" }
+    ];
+
+    const daftarMahasiswaElement = document.getElementById("daftar-mahasiswa");
+
+    function tampilkanDataMahasiswa() {
+      let html = "";
+
+      dataMahasiswa.forEach(function(mahasiswa) {
+        html += "<li><strong>Nama:</strong> " + mahasiswa.nama + "</li>";
+        html += "<li><strong>NIM:</strong> " + mahasiswa.nim + "</li>";
+        html += "<li><strong>Program Studi:</strong> " + mahasiswa.prodi + "</li>";
+        html += "<br>";
+      });
+
+      daftarMahasiswaElement.innerHTML = html;
+    }
+
+    tampilkanDataMahasiswa();
+  </script>
+</body>
+</html>
