@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #04013b;
+    color: #4371a4;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  #banner {
+    text-align: center;
+    background-color: #87afdd;
+    padding: 30px;
+  }
+  
+  #games {
+    margin-top: 30px;
+  }
+  
+  .game {
+    display: inline-block;
+    width: 30%;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #df1010;
+    margin: 8px;
+  }
+  
+  .game img {
+    width: 50%;
+    max-height: 100px;
+  }
+  
+  footer {
+    background-color: #04013b;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  

@@ -4,7 +4,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #77226e;
     }
 
     .container {
@@ -101,69 +101,64 @@
 
   <script>
     // Array data nama teman
-    var namaTeman = ["Teman 1", "Teman 2", "Teman 3"];
+    var namaTeman = ["Atta", "Hasan", "Zidhan"];
 
     // Array data hobi
-    var dataHobi = ["Hobi 1", "Hobi 2", "Hobi 3"];
+    var dataHobi = ["Basket", "Voli", "Badminton"];
 
-    // Fungsi untuk menampilkan data teman dan hobi di web
-    function showData() {
+    // Fungsi untuk menambahkan data teman dan hobi
+    function addData() {
+      var nameInput = document.getElementById("name-input");
+      var hobbyInput = document.getElementById("hobby-input");
+
+      var nameValue = nameInput.value;
+      var hobbyValue = hobbyInput.value;
+
+      namaTeman.push(nameValue);
+      dataHobi.push(hobbyValue);
+
+      nameInput.value = "";
+      hobbyInput.value = "";
+
+      displayData();
+    }
+
+    // Fungsi untuk menghapus data teman dan hobi
+    function removeData() {
+      var removeInput = document.getElementById("remove-input");
+      var index = removeInput.value;
+
+      if (index >= 0 && index < namaTeman.length) {
+        namaTeman.splice(index, 1);
+        dataHobi.splice(index, 1);
+
+        removeInput.value = "";
+
+        displayData();
+      }
+    }
+
+    // Fungsi untuk menampilkan data teman dan hobi
+    function displayData() {
       var nameList = document.getElementById("name-list");
       var hobbyList = document.getElementById("hobby-list");
 
-      // Menghapus konten sebelumnya
       nameList.innerHTML = "";
       hobbyList.innerHTML = "";
 
-      // Menambahkan data teman ke dalam web
       for (var i = 0; i < namaTeman.length; i++) {
         var nameItem = document.createElement("p");
-        nameItem.innerHTML = namaTeman[i];
+        nameItem.innerText = namaTeman[i];
         nameList.appendChild(nameItem);
-      }
 
-      // Menambahkan data hobi ke dalam web
-      for (var j = 0; j < dataHobi.length; j++) {
         var hobbyItem = document.createElement("p");
-        hobbyItem.innerHTML = dataHobi[j];
+        hobbyItem.innerText = dataHobi[i];
         hobbyList.appendChild(hobbyItem);
       }
     }
 
-    // Fungsi untuk menambahkan data ke array
-    function addData() {
-      var newName = document.getElementById("name-input").value;
-      var newHobby = document.getElementById("hobby-input").value;
-
-      // Menambahkan data ke dalam array
-      namaTeman.push(newName);
-      dataHobi.push(newHobby);
-
-      // Menampilkan data terbaru
-      showData();
-
-      // Reset input fields
-      document.getElementById("name-input").value = "";
-      document.getElementById("hobby-input").value = "";
-    }
-
-    // Fungsi untuk menghapus data dari array
-    function removeData() {
-      var index = document.getElementById("remove-input").value;
-
-      // Menghapus data dari array berdasarkan indeks
-      namaTeman.splice(index, 1);
-      dataHobi.splice(index, 1);
-
-      // Menampilkan data terbaru
-      showData();
-
-      // Reset input field
-      document.getElementById("remove-input").value = "";
-    }
-
-    // Memanggil fungsi showData untuk menampilkan data awal
-    showData();
+    // Menampilkan data awal saat halaman dimuat
+    displayData();
   </script>
 </body>
 </html>

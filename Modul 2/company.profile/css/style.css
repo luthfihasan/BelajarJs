@@ -9,11 +9,11 @@ a {
 }
 .medsos {
 	padding:5px 0;
-	background-color: #0aec64;
+	background-color: #8f8f14;
 }
 .medsos ul li {
 	display: inline-block;
-	color: #f01f1f;
+	color: #fcf8f8;
 	margin-right: 10px;
 }
 .container {
@@ -126,7 +126,7 @@ section h3 {
 }
 footer {
 	padding:30px 0;
-	background-color: #f00f7b;
+	background-color: #120e10;
 	color: #fff;
 	text-align: center;
 }
