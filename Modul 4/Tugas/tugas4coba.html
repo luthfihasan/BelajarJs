@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .alert {
+            padding: 10px;
+            margin-bottom: 10px;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        .alert-success {
+            background-color: #4caf50;
+        }
+
+        .alert-danger {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Hasan Store</h1>
+    <div class="container">
+        <form>
+            <p>Silahkan pilih merk HP yang ingin dibeli:</p>
+            <select id="hp-select">
+                <option value="Google_Pixel">Google Pixel</option>
+                <option value="iPhone">iPhone</option>
+                <option value="Xiaomi">Xiaomi</option>
+                <option value="Oppo">Oppo</option>
+            </select>
+
+            <p>Masukkan Jumlah Beli:</p>
+            <input type="number" id="quantity-input">
+
+            <p>Masukkan Nama Pemesan:</p>
+            <input type="text" id="name-input">
+
+            <p>Apakah Anda Seorang Member?</p>
+            <label for="member-yes">
+                <input type="radio" id="member-yes" name="member" value="yes"> Yes
+            </label>
+            <label for="member-no">
+                <input type="radio" id="member-no" name="member" value="no" checked> No
+            </label>
+
+            <br><br>
+            <input type="submit" value="Submit" onclick="calculateTotalPrice()">
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateTotalPrice() {
+            let hargaHp = {
+                Google_Pixel: 6000000,
+                iPhone: 10000000,
+                Xiaomi: 3000000,
+                Oppo: 4000000,
+            };
+
+            let totalHarga = 0;
+            let discount = 0;
+            let member = false;
+
+            let hpSelect = document.getElementById("hp-select");
+            let quantityInput = document.getElementById("quantity-input");
+            let nameInput = document.getElementById("name-input");
+            let memberYes = document.getElementById("member-yes");
+            let memberNo = document.getElementById("member-no");
+            let resultDiv = document.getElementById("result");
+
+            function calculateTotalPrice() {
+                let pilihan = hpSelect.value;
+                let jumlahbeli = parseInt(quantityInput.value);
+                let nama = nameInput.value;
+                let konfirmasi = memberYes.checked ? "yes" : "no";
+
+                if (pilihan in hargaHp) {
+                    totalHarga = hargaHp[pilihan];
+                } else {
+                    resultDiv.innerHTML = "<p class='alert alert-danger'>Maaf, pilihan Anda tidak tersedia</p>";
+                    return;
+                }
+
+                if (konfirmasi === "yes") {
+                    member = true;
+                    discount = 0.1 * totalHarga;
+                    const hargaAkhir = totalHarga * jumlahbeli - discount;
+                    resultDiv.innerHTML = `<p class='alert alert-success'>Hai pelanggan setia ${nama}, Total harga yang harus kamu bayar adalah Rp ${hargaAkhir}</p>`;
+                } else if (konfirmasi === "no") {
+                    member = false;
+                    discount = 0 * totalHarga;
+                    const hargaAkhir = totalHarga * jumlahbeli - discount;
+                    resultDiv.innerHTML = `<p class='alert alert-success'>Hai ${nama}, Total harga yang harus kamu bayar adalah Rp ${hargaAkhir}</p>`;
+                } else {
+                    resultDiv.innerHTML = "<p class='alert alert-danger'>Maaf Masukkan Anda Salah!</p>";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Gabungan dengan Spread Operator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #d0fa00;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333333;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #768438;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .array-container {
+      margin-bottom: 20px;
+    }
+
+    .array-title {
+      font-weight: bold;
+    }
+
+    .array-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      background-color: #4caf50;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      // Array jenis makanan
+      const foods = ['Pizza', 'Burger', 'Sushi', 'Pasta'];
+
+      // Array nama teman
+      const friends = ['John', 'Sarah', 'Michael', 'Emily'];
+
+      // Array gabungan
+      let combinedArray = [];
+
+      // Menampilkan array pertama
+      const foodContainer = document.getElementById('food-container');
+      foodContainer.innerHTML = `<h2 class="array-title">Jenis Makanan</h2>
+                                 <ul class="array-list">${foods.map(food => `<li>${food}</li>`).join('')}</ul>`;
+
+      // Menampilkan array kedua
+      const friendContainer = document.getElementById('friend-container');
+      friendContainer.innerHTML = `<h2 class="array-title">Nama Teman</h2>
+                                   <ul class="array-list">${friends.map(friend => `<li>${friend}</li>`).join('')}</ul>`;
+
+      // Menggabungkan array
+      const addButton = document.getElementById('add-button');
+      addButton.addEventListener('click', function() {
+        combinedArray = [...foods, ...friends];
+        const combinedContainer = document.getElementById('combined-container');
+        combinedContainer.innerHTML = `<h2 class="array-title">Array Gabungan</h2>
+                                        <ul class="array-list">${combinedArray.map(item => `<li>${item}</li>`).join('')}</ul>`;
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Array Gabungan</h1>
+    <div class="array-container" id="food-container"></div>
+    <div class="array-container" id="friend-container"></div>
+    <div class="btn-container">
+      <button id="add-button" class="btn">Tambah</button>
+    </div>
+    <div class="array-container" id="combined-container"></div>
+  </div>
+</body>
+</html>
+

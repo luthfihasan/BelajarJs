@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nilai Mahasiswa Polibang</title>
+    <link rel="stylesheet" href="coba.css">
+
+</head>
+<body>
+    <header>
+    <div class="container">
+        <h1><a href="index.html">LUTHFI HASAN</a></h1>
+        <ul>
+            <li class="active"><a href="coba.html">HOME</a></li>
+            <li><a href="biodata.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            
+        </ul>
+    </div>
+</header>
+
+    <h1>Nilai Mahasiwa Polibang</h1>
+<div class="content">
+    <form id="input-form">
+    <p>
+        <label for="nim">Masukkan NIM:</label>
+        <input type="text" id="nim" name="nim">
+    </p>
+    <p>
+        <label for="nama">Masukkan Nama:</label>
+        <input type="text" id="nama" name="nama">
+    </p>
+    <p> 
+        <label for="matkul">Mata Kuliah:</label>
+        <select id="matkul" name="matkul">
+            <option value=""></option>
+            <option value="Kalkulus 2">Kalkulus 2</option>
+            <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
+            <option value="Arsitektur Komputer">Arsitektur Komputer</option>
+            <option value="Desain Perangkat Lunak">Desain Perangkat Lunak</option>
+            <option value="Diskrit 1">Diskrit 1</option>
+            <option value="Struktur Data & Algoritma">Struktur Data & Algoritma</option>
+            <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+            <option value="Pemrograman Komputer 2">Pemrograman Komputer 2</option>
+            <option value="Sistem Operasi">Sistem Operasi</option>
+            <option value="Praktik Komputer 2">Praktik Komputer 2</option>
+        </select>
+    </p>
+
+        <label for="nilai">Nilai Akhir:</label>
+        <input type="text" id="nilai" name="nilai">
+
+        <button type="button" onclick="tampilNilai()">Tampil</button>
+        <button type="reset">Reset</button>
+    </form>
+</div>
+    <div  id="result-hasil" class="hasil" style="display: none;" >
+        <h2>Hasil Nilai Mahasiswa</h2>
+        <p id="nim-result"></p>
+        <p id="nama-result"></p>
+        <p id="matkul-result"></p>
+        <p id="nilai-result"></p>
+    </div>
+    <script src="coba.js"></script>
+</body>
+</html>

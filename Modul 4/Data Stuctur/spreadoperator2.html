@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gabungkan dan Tampilkan Data Array dengan Spread Operator</title>
+  <script>
+    window.onload = function() {
+      // Dua array
+      const array1 = ['Data 1', 'Data 2', 'Data 3'];
+      const array2 = ['Data 4', 'Data 5', 'Data 6'];
+
+      // Menggabungkan dua array dengan spread operator
+      const combinedArray = [...array1, ...array2];
+
+      // Menampilkan data array gabungan ke dalam halaman web
+      const container = document.getElementById('data-container');
+      container.innerHTML = combinedArray.join('<br>');
+    }
+  </script>
+</head>
+<body>
+  <h1>Data Array Gabungan</h1>
+  <div id="data-container"></div>
+</body>
+</html>
