@@ -54,7 +54,3 @@ function reset() {
   document.getElementById("nilai-result").innerHTML = "";
 }
 
-window.onload = function() {
-  var resetButton = document.querySelector("button[type='reset']");
-  resetButton.addEventListener("click", reset);
-};

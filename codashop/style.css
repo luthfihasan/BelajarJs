@@ -62,5 +62,17 @@ body {
     color: #fff;
     text-align: center;
     padding: 10px;
+
+
+    .game {
+      transition: transform 0.3s;
+    }
+
+    .game:hover {
+      transform: scale(1.1);
+    }
+
+
+
   }
   

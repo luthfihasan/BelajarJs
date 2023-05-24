@@ -2,21 +2,23 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  background: linear-gradient(to right,#fdf587,#10111c);
+  background: linear-gradient(to right,#8a29addf,#436aacdf,#43b7bbe1);
 }
 
 h1 {
   text-align: center;
   color: #f7f3f3;
 }
+
 .content {
   display:flex;
   justify-content: center;
   align-items: center;
 }
+
 form {
   display: block;
-  background-color: #fdf587;
+  background-color: #fdf587dc;
   padding: 50px;
   width: 30%;
   border-radius: 5px;
@@ -63,13 +65,12 @@ button:hover {
   margin-top: 5px;
   margin-left: 31%;
   border-radius: 5px;
-  background-color: #fdf587;
+  background-color: #fdf58796;
 }
-
 
 h2 {
   margin-top: 0;
-  color: #333;
+  color: #f7f3f3;
 }
 
 p {
@@ -83,13 +84,13 @@ header {
   font-size: 18px;
   font-weight: bold;
 }
+
 /* Style the navigation menu */
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-
 }
 
 nav li {
@@ -111,43 +112,49 @@ nav ul li a:hover{
   margin-left: 44%;
   max-width: 150px;
   width: 300px;
-  height: 180px;
+  height: 153px;
+  border-radius: 50%;
 }
 
 .instagram{
   margin: 0 auto;
-  max-width: 50px;
+  max-width: 40px;
   border-radius: 50%;
 }
 
 .whatsapp{
   margin: 0 auto;
-  max-width: 50px;
+  max-width: 40px;
   border-radius: 50%;
 }
 
 .github{
   margin: 0 auto;
-  max-width: 50px;
+  max-width: 40px;
   border-radius: 50%;
-}
-
-.profil{
-  display: f
 }
 
 .biodata{
   text-align: center;
   color: #f3f0f0;
 }
+
 table {
-  
   background-color: #fcf7f7;
-
-
+  text-align: justify;
+  padding: 50px;
+  width: 30%;
+  margin-top: 5px;
+  margin-left: 31%;
+  border-radius: 5px;
 }
 
 .array{
-  padding: 10px;
-  background-color: transparent;
+  text-align: justify;
+  padding: 31px;
+  width: 30%;
+  margin-top: 5px;
+  margin-left: 31%;
+  border-radius: 5px;
+  background-color: #fdf587a2;
 }
