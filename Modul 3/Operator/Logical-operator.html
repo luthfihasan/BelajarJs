@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logical Operator</title>
+</head>
+<body>
+    <h1>Logical Operator</h1>
+    <ul>
+        <li>AND (&&): <span id="andOperator"></span></li>
+        <li>OR (||): <span id="orOperator"></span></li>
+        <li>NOT (!): <span id="notOperator"></span></li>
+    </ul>
+
+    <script>
+        // Variabel untuk operasi logika
+        let x = 5;
+        let y = 10;
+        let z = 15;
+
+        // Menggunakan operator logika
+        document.getElementById("andOperator").textContent = (x < y) && (y < z);
+        document.getElementById("orOperator").textContent = (x < y) || (y > z);
+        document.getElementById("notOperator").textContent = !(x < y);
+    </script>
+</body>
+</html>

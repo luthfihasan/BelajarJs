@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparison Operator</title>
+</head>
+<body>
+    <h1>Comparison Operator</h1>
+    <ul>
+        <li>Equal to (==): <span id="equal"></span></li>
+        <li>Not equal to (!=): <span id="notEqual"></span></li>
+        <li>Strict equal to (===): <span id="strictEqual"></span></li>
+        <li>Strict not equal to (!==): <span id="strictNotEqual"></span></li>
+        <li>Greater than (>): <span id="greaterThan"></span></li>
+        <li>Greater than or equal to (>=): <span id="greaterThanOrEqual"></span></li>
+        <li>Less than (<): <span id="lessThan"></span></li>
+        <li>Less than or equal to (<=): <span id="lessThanOrEqual"></span></li>
+    </ul>
+
+    <script>
+        // Variabel untuk perbandingan
+        let a = 5;
+        let b = 10;
+        let c = "5";
+
+        // Menggunakan operator perbandingan
+        document.getElementById("equal").textContent = a == b;
+        document.getElementById("notEqual").textContent = a != b;
+        document.getElementById("strictEqual").textContent = a === c;
+        document.getElementById("strictNotEqual").textContent = a !== c;
+        document.getElementById("greaterThan").textContent = b > a;
+        document.getElementById("greaterThanOrEqual").textContent = b >= a;
+        document.getElementById("lessThan").textContent = a < b;
+        document.getElementById("lessThanOrEqual").textContent = a <= b;
+    </script>
+</body>
+</html>
