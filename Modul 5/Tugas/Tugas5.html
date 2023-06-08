@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Nilai Rata-rata</title>
+  <style>
+    input {
+      margin-bottom: 10px;
+      background-color: rgb(214, 230, 126);
+    }
+  </style>
+  <script>
+    function calculateAverage() {
+      var totalNilai = 0;
+      var jumlahSiswa = 0;
+
+      // Mengambil nilai dari input siswa1, siswa2, dan siswa3
+      var nilaiSiswa1 = parseFloat(document.getElementById("nilaiSiswa1").value);
+      var nilaiSiswa2 = parseFloat(document.getElementById("nilaiSiswa2").value);
+      var nilaiSiswa3 = parseFloat(document.getElementById("nilaiSiswa3").value);
+
+      // Memeriksa apakah nilai valid (tidak NaN)
+      if (!isNaN(nilaiSiswa1)) {
+        totalNilai += nilaiSiswa1;
+        jumlahSiswa++;
+      }
+
+      if (!isNaN(nilaiSiswa2)) {
+        totalNilai += nilaiSiswa2;
+        jumlahSiswa++;
+      }
+
+      if (!isNaN(nilaiSiswa3)) {
+        totalNilai += nilaiSiswa3;
+        jumlahSiswa++;
+      }
+
+      // Menghitung nilai rata-rata
+      var rataRata = totalNilai / jumlahSiswa;
+
+      // Menampilkan hasil di elemen dengan id "output"
+      document.getElementById("output").innerHTML = "Rata-rata Nilai: " + rataRata.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <h1>Kalkulator Nilai Rata-rata</h1>
+  <label for="nilaiSiswa1">Nilai Siswa 1:</label>
+  <input type="number" id="nilaiSiswa1">
+  <br>
+  <label for="nilaiSiswa2">Nilai Siswa 2:</label>
+  <input type="number" id="nilaiSiswa2">
+  <br>
+  <label for="nilaiSiswa3">Nilai Siswa 3:</label>
+  <input type="number" id="nilaiSiswa3">
+  <br>
+  <button onclick="calculateAverage()">Hitung Rata-rata</button>
+  <div id="output"></div>
+</body>
+</html>

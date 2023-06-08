@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Nilai Mahasiswa</title>
+  <style>
+    input {
+      margin-bottom: 10px;
+      background-color: rgb(91, 179, 148);
+    }
+  </style>
+  <script>
+    function calculateGrade() {
+      var namaMahasiswa = document.getElementById("namaMahasiswa").value;
+      var nilaiTugas = parseFloat(document.getElementById("nilaiTugas").value);
+      var nilaiUjian = parseFloat(document.getElementById("nilaiUjian").value);
+
+      var nilaiAkhir = (nilaiTugas * 0.4) + (nilaiUjian * 0.6);
+      var grade = "";
+
+      if (nilaiAkhir >= 80) {
+        grade = "A";
+      } else if (nilaiAkhir >= 70) {
+        grade = "B";
+      } else if (nilaiAkhir >= 60) {
+        grade = "C";
+      } else if (nilaiAkhir >= 50) {
+        grade = "D";
+      } else {
+        grade = "E";
+      }
+
+      var output = "Nama Mahasiswa: " + namaMahasiswa + "<br>" +
+                   "Nilai Akhir: " + nilaiAkhir.toFixed(2) + "<br>" +
+                   "Grade: " + grade;
+
+      document.getElementById("output").innerHTML = output;
+    }
+  </script>
+</head>
+<body>
+  <h1>Kalkulator Nilai Mahasiswa</h1>
+  <label for="namaMahasiswa">Nama Mahasiswa:</label>
+  <input type="text" id="namaMahasiswa">
+  <br>
+  <label for="nilaiTugas">Nilai Tugas:</label>
+  <input type="number" id="nilaiTugas">
+  <br>
+  <label for="nilaiUjian">Nilai Ujian:</label>
+  <input type="number" id="nilaiUjian">
+  <br>
+  <button onclick="calculateGrade()">Hitung Grade</button>
+  <div id="output"></div>
+</body>
+</html>

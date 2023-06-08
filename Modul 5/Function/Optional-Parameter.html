@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Program HTML dengan Optional Parameter</title>
+	<script>
+		function greeting(name = "World") {
+			document.write("Hello, " + name + "!");
+		}
+	</script>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+	<p>Enter your name below:</p>
+	<input type="text" id="name">
+	<button onclick="greeting(document.getElementById('name').value)">Say Hello</button>
+	<button onclick="greeting()">Say Hello to the World</button>
+</body>
+</html>
