@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Return</title>
+    <script>
+        function addNumbers(num1, num2) {
+            var sum = num1 + num2;
+            return sum;
+        }
+
+        function multiplyNumbers(num1, num2) {
+            var product = num1 * num2;
+            return product;
+        }
+
+        function calculate() {
+            var number1 = 5;
+            var number2 = 3;
+
+            var sumResult = addNumbers(number1, number2);
+            var productResult = multiplyNumbers(number1, number2);
+
+            document.getElementById("result").innerHTML = "Penjumlahan: " + sumResult + "<br>Perkalian: " + productResult;
+        }
+    </script>
+</head>
+<body>
+    <h1>Function Return</h1>
+    <button onclick="calculate()">Hitung</button>
+    <p id="result"></p>
+</body>
+</html>

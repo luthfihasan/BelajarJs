@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bilangan Genap</title>
+    <script>
+        function displayEvenNumbers() {
+            var output = "";
+
+            for (var number = 2; number <= 10; number += 2) {
+                output += number + " ";
+            }
+
+            document.getElementById("result").innerHTML = "Bilangan genap: " + output;
+        }
+    </script>
+</head>
+<body>
+    <h1>Bilangan Genap</h1>
+    <button onclick="displayEvenNumbers()">Tampilkan Bilangan Genap</button>
+    <p id="result"></p>
+</body>
+</html>

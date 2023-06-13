@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>While Statement</title>
+    <script>
+        function displayNumbers() {
+            var number = 1;
+            var output = "";
+
+            while (number <= 10) {
+                output += number + " ";
+                number++;
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h1>While Statement Example</h1>
+    <button onclick="displayNumbers()">Display Numbers</button>
+    <p id="result"></p>
+</body>
+</html>

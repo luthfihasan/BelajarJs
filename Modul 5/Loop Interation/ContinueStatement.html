@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Continue Statement</title>
+    <script>
+        function continueLoop() {
+            var numbers = [1, 2, 3, 4, 5];
+            var output = "";
+
+            for (var number of numbers) {
+                if (number === 3) {
+                    continue;  // Melanjutkan ke iterasi berikutnya jika angka adalah 3
+                }
+                output += number + " ";
+            }
+
+            document.getElementById("result").innerHTML = "Angka: " + output;
+        }
+    </script>
+</head>
+<body>
+    <h1>Continue Statement</h1>
+    <button onclick="continueLoop()">Lanjutkan Perulangan</button>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Declaration</title>
+    <script>
+        function greet() {
+            var name = prompt("Masukkan nama Anda:");
+            var greeting = "Halo, " + name + "! Selamat datang.";
+
+            document.getElementById("result").innerHTML = greeting;
+        }
+    </script>
+</head>
+<body>
+    <h1>Function Declaration</h1>
+    <button onclick="greet()">Sapa Saya</button>
+    <p id="result"></p>
+</body>
+</html>

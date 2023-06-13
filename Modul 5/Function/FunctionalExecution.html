@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Execution Context</title>
+    <script>
+        function outerFunction() {
+            var outerVariable = "Variabel Luar";
+
+            function innerFunction() {
+                var innerVariable = "Variabel Dalam";
+                console.log(outerVariable);
+                console.log(innerVariable);
+            }
+
+            innerFunction();
+        }
+
+        outerFunction();
+    </script>
+</head>
+<body>
+    <h1>Function Execution Context</h1>
+    <p>Buka konsol browser untuk melihat hasilnya.</p>
+</body>
+</html>

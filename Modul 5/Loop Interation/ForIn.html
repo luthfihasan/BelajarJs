@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bilangan Kelipatan 10</title>
+    <script>
+        function displayNumbers() {
+            var numbers = {};
+
+            for (var number = 10; number <= 40; number += 10) {
+                numbers[number] = true;
+            }
+
+            var output = "";
+
+            for (var num in numbers) {
+                output += num + " ";
+            }
+
+            document.getElementById("result").innerHTML = "Bilangan Kelipatan 10: " + output;
+        }
+    </script>
+</head>
+<body>
+    <h1>Bilangan Kelipatan 10</h1>
+    <button onclick="displayNumbers()">Tampilkan Bilangan</button>
+    <p id="result"></p>
+</body>
+</html>

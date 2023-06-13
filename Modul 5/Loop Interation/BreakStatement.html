@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Break Statement</title>
+    <script>
+        function breakLoop() {
+            var numbers = [1, 2, 3, 4, 5];
+            var output = "";
+
+            for (var number of numbers) {
+                if (number === 3) {
+                    break;  // Menghentikan perulangan jika angka adalah 3
+                }
+                output += number + " ";
+            }
+
+            document.getElementById("result").innerHTML = "Angka: " + output;
+        }
+    </script>
+</head>
+<body>
+    <h1>Break Statement</h1>
+    <button onclick="breakLoop()">Hentikan Perulangan</button>
+    <p id="result"></p>
+</body>
+</html>

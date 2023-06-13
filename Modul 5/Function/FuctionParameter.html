@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Parameter</title>
+    <script>
+        function greet(name) {
+            var greeting = "Halo, " + name + "! Selamat datang.";
+
+            document.getElementById("result").innerHTML = greeting;
+        }
+    </script>
+</head>
+<body>
+    <h1>Function Parameter</h1>
+    <button onclick="greet('John')">Sapa John</button>
+    <button onclick="greet('Jane')">Sapa Jane</button>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Labeled Statement</title>
+    <script>
+        function labeledStatement() {
+            var output = "";
+
+            outerLoop:
+            for (var i = 1; i <= 3; i++) {
+                innerLoop:
+                for (var j = 1; j <= 3; j++) {
+                    if (i === 2 && j === 2) {
+                        break outerLoop;  // Keluar dari perulangan terluar menggunakan labeled statement
+                    }
+                    output += "i=" + i + ", j=" + j + "<br>";
+                }
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h1>Labeled Statement</h1>
+    <button onclick="labeledStatement()">Eksekusi Labeled Statement</button>
+    <p id="result"></p>
+</body>
+</html>

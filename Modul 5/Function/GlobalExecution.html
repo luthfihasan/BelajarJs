@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Global Execution Context</title>
+    <script>
+        var globalVariable = "Variabel Global";
+
+        function globalFunction() {
+            var localVariable = "Variabel Lokal";
+            console.log(globalVariable);
+            console.log(localVariable);
+        }
+
+        globalFunction();
+    </script>
+</head>
+<body>
+    <h1>Global Execution Context</h1>
+    <p>Buka konsol browser untuk melihat hasilnya.</p>
+</body>
+</html>
