@@ -1,0 +1,225 @@
+* {
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right,#0B666A,#35A29F,#0B666A);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: #071952;
+}
+  
+.logo-game {
+  max-width: 50px;
+  margin-left: 25px;
+  border-radius: 50%;
+}
+  
+.logo-rpl {
+  margin-right: 25px;
+  max-width: 40px;
+  padding: 10px;
+}
+
+.logo-polibang {
+  margin: 0 auto;
+  max-width: 40px;
+  padding: 10px;
+}
+
+.tagline {
+  font-size: 40px;
+  font-weight:900;
+  text-align: center;
+  margin-top: 50px;
+}
+  
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.content a:hover {
+  color: #F7E6C4;
+  text-decoration: none;
+}
+  
+.description {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 16px;
+}
+  
+.foto-profil {
+  display: block;
+  max-width: 100px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;;
+  margin-bottom: 20px;
+  border: 2.5px solid #071952;
+  filter: drop-shadow(10px 10px 7px #071952);
+}
+  
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #F7E6C4;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.profil {
+  margin-left: 1px;
+  font-weight: bold;
+}
+
+.profil a {
+  color: #606c5d;
+  border: 1.8px solid #F7E6C4;
+  border-radius: 50px;
+  text-align: center;
+  width: 150px;
+  height: 20px;
+  padding: 8px;
+}
+
+.profil a:hover {
+  color: #F7E6C4;
+  background-color: #0B666A;
+  transition: all .3s ease-in-out;
+  box-shadow:  0 0 10px #35A29F,
+               0 0 10px #35A29F
+}
+
+.profil a:hover::before {
+  filter: blur(15px);
+}
+  
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #071952;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sosmed {
+  text-align: center;
+  font-size: 40px;
+}
+
+.sosmed a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+  
+.sosmed a:hover {
+  color: #bf9333;
+}
+  
+.footer a {
+  color: #000;
+  text-decoration: none;
+}
+  
+.footer a:hover {
+  text-decoration: none;
+}
+  
+.footer .copyright {
+  margin-right: 50px;
+  color:#F7E6C4;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  margin-bottom: 3px;
+  margin-left: 25px;
+}
+
+.social a {
+  color: #F7E6C4;
+  font-size: 1.6rem;
+  border: 1.8px solid #F7E6C4;
+  border-radius: 50%;
+  padding: .35rem;
+  text-align: center;
+  width: 27px;
+  height: 27px;
+}
+
+.social a:hover {
+  color: #071952;
+  background-color: #F7E6C4;
+  transition: all .3s ease-in-out;
+  box-shadow:  0 0 5px #F7E6C4,
+              0 0 10px #F7E6C4  
+}
+
+.play {
+  border: 2px solid #F7E6C4;
+  margin-top: 8px;
+  margin-right: auto;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #071952;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: medium;
+  box-shadow:  0 0 5px #071952,
+              0 0 5px #071952
+}
+
+.play:hover {
+  border: 2px solid #F7E6C4;
+  cursor: pointer;
+  color: #fff;
+  background-color: #f91d1d;
+  transition: all .3s ease-in-out;
+  box-shadow:  0 0 5px #f91d1d,
+              0 0 10px #f91d1d
+}
+
+/* CSS untuk input nama pemain */
+.player-name {
+  margin: 25px;
+  display: block;
+  margin-bottom: 12px;
+  text-align:center;
+  font-weight: bold;
+  font-size: large;
+}
+
+.text {
+  margin: auto; /* Menggunakan margin: 10px auto; untuk pemusatannya */
+  display: flex;
+  justify-content: center; /* Menggunakan justify-content: center; untuk pemusatan horizontal */
+  align-items: center; /* Menggunakan align-items: center; untuk pemusatan vertikal */
+  padding: 4px;
+  background-color: #fff;
+  width: 200px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  text-align: center;
+  border: 3px solid #071952;
+}

@@ -50,14 +50,14 @@ const selectors = {
     }
   
     const image = [
-      'foto/ale.jpeg',
-      'foto/alv.jpeg',
-      'foto/de.jpeg',
-      'foto/lis.jpeg',
-      'foto/asn.jpeg',
-      'foto/mar.jpeg',
-      'foto/san.jpeg',
-      'foto/raf.jpeg',
+      'foto/emi.jpg',
+      'foto/pau.jpg',
+      'foto/lic.jpg',
+      'foto/mes.jpg',
+      'foto/asn.jpg',
+      'foto/pat.jpg',
+      'foto/elk.jpg',
+      'foto/pra.jpg',
     ];
     const picks = pickRandom(image, (dimensions * dimensions) / 2);
     const items = shuffle([...picks, ...picks]);

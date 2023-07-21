@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Game Cari Kata</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="game.css"/>
+  </head>
+  <body>
+    
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html"><i class="bi-house-fill"></i> Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="wrap">
+      <h1 class="logo">Game Cari Kata</h1>
+      <h2 class="lvl">Level 1</h2>
+      <h3 class="user">Nama Pemain : <span id="player-name-display"></span></h3>
+
+<script src="utility.js"></script>
+<script src="wordsearch.min.js"></script>
+
+      <section id="ws-area"></section>
+      <ul class="ws-words"></ul>
+    </div>
+    
+    
+    
+    <script type="text/javascript">
+      var gameAreaEl = document.getElementById('ws-area');
+      var gameobj = gameAreaEl.wordSearch();
+
+      // Memasukkan Kata ke dalam `.ws-words`
+      var words = gameobj.settings.wordsList,
+        wordsWrap = document.querySelector('.ws-words');
+      for (i in words) {
+        var liEl = document.createElement('li');
+        liEl.setAttribute('class', 'ws-word');
+        liEl.innerText = words[i];
+        wordsWrap.appendChild(liEl);
+      }
+      
+    </script>
+  </body>
+</html>

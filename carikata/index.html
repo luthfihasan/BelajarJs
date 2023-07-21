@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+    #container {
+        width: 810px;
+        height: 650px;
+        margin: 0px auto;
+    }
+
+    #hint {
+        width: 200px;
+        height: 570px;
+        float: left;
+        text-align: center;
+        font-size: 30px;
+        border: 1px black;
+    }
+
+    #letters {
+        width: 58px;
+        height: 580px;
+        float: right;
+    
+    }
+
+    .individual {
+        width: 40px;
+        height: 40px;
+        float: left;
+        border: 1px solid black;
+        border-radius: 2px;
+        font-size: 25px;
+        text-align: center;
+        margin: 3px;
+    }
+</style>
+
+<script>
+    var myWords = ["AGUNG", "ANAM", "ATEP", "ATTA", "BAGUS", "KHOIRUL",
+    "FAHMI", "ALBANANI", "FADLY"];
+    $ (document).ready(function() {
+        arrangeGame();
+    });
+
+    function arrangeGame()
+    {
+        $.each(myWords, function(key, item) {
+            $("#hint").append("<p>" + item + "</p>");
+        });
+        for(var i=1;i<=12;i++)
+        {
+            for(var j=1;j<=12;j++)
+            {
+                $("#letters").append("<div class=individual data-row=" + i + " data-column=" + j + "></div>");
+            }
+        }
+    function placeCorrectLetters()
+    {
+        var positions = ["row", "column", "diagonal"];
+        var orientation =
+        positions[(Math.random()*positions.length)];
+        alert(orientation);
+    }
+    }
+</script>
+
+</head>
+<body>
+    <div id="container">
+        <div id="hint"></div>
+        <div id="letters"></div>
+    </div>
+</body>
+</html>
