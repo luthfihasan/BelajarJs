@@ -9,9 +9,15 @@ function prevslide() {
   localStorage.setItem('playerName', playerName);
 }
 
-// Ambil nilai playerName dari local storage
-var playerName = localStorage.getItem('playerName');
+var myGamePiece;
+var myObstacles = [];
+var mySound;
+var myMusic;
 
-// Tampilkan nilai playerName di halaman
-var playerNameElement = document.getElementById('player-name-display');
-playerNameElement.textContent = playerName;
+function startGame() {
+  myGamePiece = new component(30, 30, "red", 10, 120);
+  mySound = new sound("bounce.mp3");
+  myMusic = new sound("gametheme.mp3");
+  myMusic.play();
+  myGameArea.start();
+}

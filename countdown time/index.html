@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+
+<script>
+// Tetapkan tanggal yang akan kita hitung mundur
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+// Perbarui hitungan mundur setiap 1 detik
+var x = setInterval(function() {
+
+  // Dapatkan tanggal dan waktu hari ini
+  var now = new Date().getTime();
+
+  // Temukan jarak antara sekarang dan tanggal hitung mundur
+  var distance = countDownDate - now;
+
+  // Perhitungan waktu untuk menit dan detik
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Tampilkan hasilnya di elemen dengan id="demo"
+  document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+
+  // Jika hitungan mundur selesai, tulis beberapa teks
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>

@@ -1,4 +1,3 @@
-
 function removeDiacritics(e) {
     for (var t = 0; t < defaultDiacriticsRemovalMap.length; t++)
       e = e.replace(
@@ -28,6 +27,7 @@ function removeDiacritics(e) {
         : (console.log("Letter not detected : " + e + ":" + codefirstLetter), t)
     );
   }
+
   !function () {
     "use strict";
   
@@ -37,8 +37,8 @@ function removeDiacritics(e) {
       this.solved = 0;
       var u = {
         directions: ["W", "N", "WN", "EN"],
-        gridSize: 10,
-        words: ["Mouse", "Keyboard", "Joystick", "Monitor", "Flasdisk"],
+        gridSize: 7,
+        words: ["Java", "Phyton", "Html", "Ruby", "Php"],
         wordsList: [],
         debug: false,
       };
@@ -149,8 +149,8 @@ function removeDiacritics(e) {
           for (var u = 0; u < this.settings.gridSize; u++) {
             var s = document.createElement("canvas");
             s.setAttribute("class", "ws-col");
-            s.setAttribute("width", 40);
-            s.setAttribute("height", 40);
+            s.setAttribute("width", 45);
+            s.setAttribute("height", 45);
             var r = s.width / 2;
             var i = s.height / 2;
             var o = s.getContext("2d");
@@ -248,11 +248,10 @@ function removeDiacritics(e) {
         e.querySelector(".ws-game-over").appendChild(nextButton);
       };
       
-      // Function to be called when "Next" button is clicked
       e.prototype.navigateToNextPage = function () {
-        // Replace "YOUR_NEXT_PAGE_URL_HERE" with the URL of the next HTML page you want to navigate to
         window.location.href = "game2.html";
       };
+
       
 
       
