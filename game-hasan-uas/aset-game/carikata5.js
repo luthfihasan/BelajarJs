@@ -215,7 +215,7 @@ function removeDiacritics(e) {
             var s = e[u].row + 1,
               r = e[u].col + 1,
               i = document.querySelector(".ws-area .ws-row:nth-child(" + s + ") .ws-col:nth-child(" + r + ")");
-            i.classList.add("ws-found3");
+            i.classList.add("ws-found4");
           }
           var o = document.querySelector(".ws-words");
           var a = o.getElementsByTagName("li");
