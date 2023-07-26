@@ -231,14 +231,14 @@ body {
 	z-index: -1;
 	position:fixed;
   top: 0px;
-  left: -370px;
+  left: -550px;
 }
 
 .particles span {
 	position: relative;
 	bottom: 25px;
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
 	background: #071952;
 	box-shadow: 0 0 0 10px #07195246,
 	0 0 50px #071952,
